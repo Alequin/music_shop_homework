@@ -13,8 +13,7 @@ public abstract class Sellable{
   }
 
   public double calculateMarkUp(){
-    // Find the difference between
-    return 0.0;
+    return this.sellPrice - this.tradePrice;
   }
 
   public abstract String getDescription();
