@@ -2,9 +2,9 @@ package shop;
 
 public abstract class Sellable{
 
-  private String description;
-  private double tradePrice;
-  private double sellPrice;
+  protected String description;
+  protected double tradePrice;
+  protected double sellPrice;
 
   public Sellable(double tradePrice, double sellPrice, String description){
     this.tradePrice = tradePrice;

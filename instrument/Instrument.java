@@ -5,7 +5,7 @@ import shop.Sellable;
 
 public abstract class Instrument extends Sellable implements Playable{
 
-  private InstrumentType type;
+  protected InstrumentType type;
 
   public Instrument(double tradePrice, double sellPrice, String description, InstrumentType type){
     super(tradePrice, sellPrice, description);
