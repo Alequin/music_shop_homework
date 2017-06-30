@@ -5,8 +5,11 @@ import shop.Sellable;
 
 public abstract class Instrument extends Sellable implements Playable{
 
-  private String material;
-  private String colour;
   private InstrumentType type;
+
+  public Instrument(double tradePrice, double sellPrice, String description, InstrumentType type){
+    super(tradePrice, sellPrice, description);
+    this.type = type;
+  }
 
 }
