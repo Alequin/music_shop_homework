@@ -16,10 +16,16 @@ public abstract class Sellable{
     return this.sellPrice - this.tradePrice;
   }
 
-  public abstract String getDescription();
+  public double getSellPrice(){
+    return this.sellPrice;
+  }
 
-  public abstract double getTradePrice();
+  public double getTradePrice(){
+    return this.tradePrice;
+  }
 
-  public abstract double getSellPrice();
+  public String getDescription(){
+    return this.description;
+  }
 
 }

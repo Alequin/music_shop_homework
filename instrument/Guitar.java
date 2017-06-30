@@ -16,17 +16,4 @@ public class Guitar extends Instrument{
   public String play(){
     return "strum strum strum";
   }
-
-  public double getSellPrice(){
-    return this.sellPrice;
-  }
-
-  public double getTradePrice(){
-    return this.tradePrice;
-  }
-
-  public String getDescription(){
-    return this.description;
-  }
-
 }
