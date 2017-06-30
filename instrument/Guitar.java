@@ -10,19 +10,19 @@ public class Guitar extends Instrument{
   }
 
   public String play(){
-    return "";
+    return "strum strum strum";
   }
 
   public double getSellPrice(){
-    return 0.0;
+    return this.sellPrice;
   }
 
   public double getTradePrice(){
-    return 0.0;
+    return this.tradePrice;
   }
 
   public String getDescription(){
-    return "";
+    return this.description;
   }
 
 }
