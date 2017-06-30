@@ -9,6 +9,10 @@ public class Guitar extends Instrument{
     this.strings = strings;
   }
 
+  public int getStringsCount(){
+    return this.strings;
+  }
+
   public String play(){
     return "strum strum strum";
   }
