@@ -8,12 +8,13 @@ public abstract class Sellable{
 
   public double calculateMarkUp(){
     // Find the difference between
+    return 0.0;
   }
 
-  public String getDescription();
+  public abstract String getDescription();
 
-  public double getTradePrice();
+  public abstract double getTradePrice();
 
-  public double getSellPrice();
+  public abstract double getSellPrice();
 
 }
