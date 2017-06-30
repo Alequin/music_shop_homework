@@ -6,6 +6,12 @@ public class Guitar extends Instrument{
 
   public Guitar(int strings, double tradePrice, double sellPrice, String description){
     super(tradePrice, sellPrice, description, InstrumentType.STRING);
+    if(strings < 0){
+      throw new IllegalArgumentException(
+        "Strings number must be greater than or equal to 0\n" +
+        "Strings: " + strings
+      );
+    }
     this.strings = strings;
   }
 
