@@ -39,6 +39,10 @@ public class Shop{
     stock.add(item);
   }
 
+  public void removeFromStock(Sellable item){
+    stock.remove(item);
+  }
+
   public boolean isInStock(Sellable item){
     return stock.contains(item);
   }
