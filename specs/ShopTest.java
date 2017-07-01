@@ -27,16 +27,28 @@ public class ShopTest{
 
   @Test
   public void canGetStockCount(){
-
+    assertEquals(0, shop.getStockCount());
+    shop.addToStock(guitar);
+    shop.addToStock(sheetMusic);
+    assertEquals(2, shop.getStockCount());
   }
 
   @Test
-  public void canAddItemToStockCount(){
-
+  public void canAddItemToStockAndCanCheckIfInStock(){
+    assertFalse(shop.isInStock(guitar));
+    shop.addToStock(guitar);
+    assertTrue(shop.isInStock(guitar));
   }
 
   @Test
   public void canGetArrayOfStock(){
-    
+    shop.addToStock(guitar);
+    shop.addToStock(piano);
+    shop.addToStock(flute);
+    shop.addToStock(drumSticks);
+    shop.addToStock(sheetMusic);
+    Sellable[] expected = {guitar, piano, flute, drumSticks, sheetMusic};
+    Sellable[] result = shop.getStock();
+    assertArrayEquals(expected, result);
   }
 }
