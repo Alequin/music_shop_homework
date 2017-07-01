@@ -59,6 +59,8 @@ public class ShopTest{
     assertFalse(shop.isInStock(guitar));
     shop.addToStock(guitar);
     assertTrue(shop.isInStock(guitar));
+    shop.removeFromStock(guitar);
+    assertFalse(shop.isInStock(guitar));
   }
 
   @Test
