@@ -34,12 +34,20 @@ public class ShopTest{
   }
 
   @Test
-  public void canAddItemToStockAndCanCheckIfInStock(){
+  public void CanAddToStock(){
+    int preAddStockCount = shop.getStockCount();
+    shop.addToStock(guitar);
+    shop.addToStock(sheetMusic);
+    assertEquals(preAddStockCount + 2, shop.getStockCount());
+  }
+
+  @Test
+  public void CanCheckIfInStock(){
     assertFalse(shop.isInStock(guitar));
     shop.addToStock(guitar);
     assertTrue(shop.isInStock(guitar));
   }
-  
+
   @Test
   public void canGetArrayOfStock(){
     shop.addToStock(guitar);
