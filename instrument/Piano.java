@@ -6,7 +6,7 @@ public class Piano extends Instrument{
   private int pedals;
 
   public Piano(int keys, int pedals, double tradePrice, double sellPrice, String description){
-    super(tradePrice, sellPrice, description, InstrumentType.PERCUSION);
+    super(tradePrice, sellPrice, description, InstrumentType.PERCUSSION);
     if(keys <= 0 || pedals <= 0){
       throw new IllegalArgumentException(
         "Keys and Pedals must be greated than 0\n" +

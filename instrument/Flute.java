@@ -22,7 +22,7 @@ public class Flute extends Instrument{
     return this.lengthInCentimeters;
   }
 
-  public int isOpenHoles(){
+  public boolean isOpenHoles(){
     return this.openHoles;
   }
 
