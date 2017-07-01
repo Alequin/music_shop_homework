@@ -17,4 +17,25 @@ public class Shop{
     this.maxStock = maxStock;
     this.stock = new ArrayList<Sellable>();
   }
+
+  public int getMaxStockAmount(){
+    return this.maxStock;
+  }
+
+  public void setMaxStockAmount(int amount){
+    this.maxStock = amount;
+  }
+
+  public int getStockCount(){
+    return stock.size();
+  }
+
+  public void addToStock(Sellable item){
+    if(getStockCount() + 1 > maxStock){
+      throw new IllegalArgumentException(
+        "Max stock of this shop is set to 5 items"
+      );
+    }
+    stock.add(item);
+  }
 }

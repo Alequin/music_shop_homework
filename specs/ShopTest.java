@@ -33,22 +33,22 @@ public class ShopTest{
     assertEquals(2, shop.getStockCount());
   }
 
-  @Test
-  public void canAddItemToStockAndCanCheckIfInStock(){
-    assertFalse(shop.isInStock(guitar));
-    shop.addToStock(guitar);
-    assertTrue(shop.isInStock(guitar));
-  }
-
-  @Test
-  public void canGetArrayOfStock(){
-    shop.addToStock(guitar);
-    shop.addToStock(piano);
-    shop.addToStock(flute);
-    shop.addToStock(drumSticks);
-    shop.addToStock(sheetMusic);
-    Sellable[] expected = {guitar, piano, flute, drumSticks, sheetMusic};
-    Sellable[] result = shop.getStock();
-    assertArrayEquals(expected, result);
-  }
+  // @Test
+  // public void canAddItemToStockAndCanCheckIfInStock(){
+  //   assertFalse(shop.isInStock(guitar));
+  //   shop.addToStock(guitar);
+  //   assertTrue(shop.isInStock(guitar));
+  // }
+  //
+  // @Test
+  // public void canGetArrayOfStock(){
+  //   shop.addToStock(guitar);
+  //   shop.addToStock(piano);
+  //   shop.addToStock(flute);
+  //   shop.addToStock(drumSticks);
+  //   shop.addToStock(sheetMusic);
+  //   Sellable[] expected = {guitar, piano, flute, drumSticks, sheetMusic};
+  //   Sellable[] result = shop.getStock();
+  //   assertArrayEquals(expected, result);
+  // }
 }
