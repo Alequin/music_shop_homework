@@ -42,4 +42,8 @@ public class Shop{
   public boolean isInStock(Sellable item){
     return stock.contains(item);
   }
+
+  public Sellable[] getStock(){
+    return stock.toArray(new Sellable[getStockCount()]);
+  }
 }
