@@ -34,11 +34,24 @@ public class ShopTest{
   }
 
   @Test
-  public void CanAddToStock(){
+  public void canAddToStock(){
     int preAddStockCount = shop.getStockCount();
     shop.addToStock(guitar);
     shop.addToStock(sheetMusic);
-    assertEquals(preAddStockCount + 2, shop.getStockCount());
+    int expected = preAddStockCount + 2;
+    assertEquals(expected, shop.getStockCount());
+  }
+
+  @Test
+  public void canRemoveItemFromStock(){
+    int preAddStockCount = shop.getStockCount();
+    shop.addToStock(guitar);
+    shop.addToStock(sheetMusic);
+    int expected = preAddStockCount + 2;
+    assertEquals(expected, shop.getStockCount());
+    shop.removeFromStock(guitar);
+    expected -= 1;
+    assertEquals(expected, shop.getStockCount());
   }
 
   @Test
