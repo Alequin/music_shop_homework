@@ -38,4 +38,8 @@ public class Shop{
     }
     stock.add(item);
   }
+
+  public boolean isInStock(Sellable item){
+    return stock.contains(item);
+  }
 }

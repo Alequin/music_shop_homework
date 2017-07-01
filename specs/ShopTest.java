@@ -33,12 +33,12 @@ public class ShopTest{
     assertEquals(2, shop.getStockCount());
   }
 
-  // @Test
-  // public void canAddItemToStockAndCanCheckIfInStock(){
-  //   assertFalse(shop.isInStock(guitar));
-  //   shop.addToStock(guitar);
-  //   assertTrue(shop.isInStock(guitar));
-  // }
+  @Test
+  public void canAddItemToStockAndCanCheckIfInStock(){
+    assertFalse(shop.isInStock(guitar));
+    shop.addToStock(guitar);
+    assertTrue(shop.isInStock(guitar));
+  }
   //
   // @Test
   // public void canGetArrayOfStock(){
