@@ -17,7 +17,4 @@ public class Shop{
     this.maxStock = maxStock;
     this.stock = new ArrayList<Sellable>();
   }
-
-
-
 }
